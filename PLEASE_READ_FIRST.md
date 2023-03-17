@@ -4,7 +4,7 @@ Hi there 👋,
 
 Thank you for completing this brief take-home assignment. Your time and effort are greatly appreciated. Please timebox your effort to a maximum of 3 hours.
 
-The purpose of this exercise is to evaluate your backend skills in Node.js, SQL, TypeORM, and testing. Please note that you may make assumptions, simplifications, or other changes to the problems, but please state them clearly in your write-up when you submit this assignment. Please feel free to use libraries as appropriate, as there is no need to reinvent the wheel.
+The purpose of this exercise is to evaluate your backend skills in Node.js, SQL, and testing. Please note that you may make assumptions, simplifications, or other changes to the problems, but please state them clearly in your write-up when you submit this assignment. Please feel free to use libraries as appropriate, as there is no need to reinvent the wheel.
 
 Before starting, please review the instructions carefully.
 
@@ -12,7 +12,19 @@ Before starting, please review the instructions carefully.
 
 # Acceptance criteria
 
-Your task is to build a REST API using TypeORM and SQLite to manage a property list. The API should enable users to create, read, update, and delete property data from the database. In addition, the API should support filtering and pagination of property data. The SQLite database is pre-seeded with data from the SimplyRETS API get_properties endpoint.
+Your task is to build a REST API using Nodejs and SQLite to manage a property list. 
+
+The API should enable users to perform CRUD actions (create, read, update, delete) on property data from the database.
+
+Requests should be validated where applicable.
+
+Invalid requests and other errors should be handled appropriately along with the appropriate HTTP status codes. You may use your discretion regarding error responses themselves.
+
+Where applicable, endpoints returning multiple records should be filterable and support pagination. You may choose any pagination strategy you are familiar with.
+
+The SQLite database is pre-seeded with data from the SimplyRETS API get_properties endpoint.
+
+We encourage you to use TypeORM since we use it heavily at Side. If you have a different approach, feel free to proceed, but please document the reasons / tradeoffs.
 
 # What you will be assessed on?
 
@@ -37,7 +49,7 @@ yarn install && yarn start
 
 In this boilerplate, you will find:
 
-- The main entry file: `index.js`
+- The main entry file: `index.ts`
 - A seeded SQLite DB with Properties data from SimplyRETS API `property.db`
 - A `dataSource.ts` file for creating typeorm DataSource instance
 - A `entities` folder contains the property TypeORM entity
