@@ -17,10 +17,10 @@ propertyRoutes.post('/', async (req, res) => {
   res.send('Create property');
 });
 
-propertyRoutes.put('/', async (req, res) => {
+propertyRoutes.put('/:id', async (req, res) => {
   res.send('Update property');
 });
 
-propertyRoutes.delete('/', async (req, res) => {
+propertyRoutes.delete('/:id', async (req, res) => {
   res.send('Delete property');
 });
