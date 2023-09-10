@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 3000;
     await AppDataSource.initialize();
     console.log('Database connected');
 
-    await seedDb();
+    await seedDb(AppDataSource);
     console.log('Database populated with test data');
 
     app.listen(PORT, () => {

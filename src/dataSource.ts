@@ -11,7 +11,7 @@ const AppDataSource = new DataSource({
 
 export default AppDataSource;
 
-export const seedDb = async () => {
+export const seedDb = async (appDataSource: DataSource) => {
   const { default: data } = await import('./data/seed.json');
-  await AppDataSource.manager.insert(Property, data);
+  await appDataSource.manager.insert(Property, data);
 };
